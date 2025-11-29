@@ -7,6 +7,13 @@
     <title>ADHD Generator — Coming Soon</title>
     <meta name="description"
         content="The next release of ADHD Generator is almost here. Get a dopamine-rich video builder built for creators.">
+
+    <!-- FAVICON -->
+    <!-- Put favicon.png in the same folder as this index.html -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
@@ -134,7 +141,6 @@
                 </div>
 
                 <div class="max-w-3xl mx-auto glass-card rounded-2xl p-5 sm:p-6 border border-white/10 shadow-2xl">
-                    <!-- IMPORTANT: replace YOUR_EMAIL_HERE with the email that should receive waitlist signups -->
                     <form
                         id="notifyForm"
                         method="POST"
@@ -243,7 +249,6 @@
                     return;
                 }
 
-                // Basic email format check
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(email)) {
                     notifyMessage.textContent = 'That does not look like a valid email. Try again?';
@@ -252,7 +257,6 @@
                     return;
                 }
 
-                // Show "sending" state
                 notifyMessage.textContent = 'Adding you to the list...';
                 notifyMessage.classList.remove('hidden', 'text-red-300', 'text-emerald-300');
                 notifyMessage.classList.add('text-gray-300');
